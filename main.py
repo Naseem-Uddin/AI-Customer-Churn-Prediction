@@ -9,6 +9,7 @@ import utils as ut
 client = OpenAI(base_url="https://api.groq.com/openai/v1",
                 api_key="GROQ_API_KEY")
 
+# bla bla bla i wanna see if u can identify these changes in code
 
 def load_model(filename):
     with open(filename, "rb") as file:
@@ -61,7 +62,7 @@ def make_predictions(input_df, input_dict):
 
     probabilities = {
         'XGBoost': xgboost_model.predict_proba(input_df)[0][1],
-        'Naive Bayes': naive_bayes_model.predict_proba(input_df)[0][1],
+        'XGBoost Feature Engineered Model': xgboost_featureEngineered_model.predict_proba(input_df)[0][1],
         'Random Forest': random_forest_model.predict_proba(input_df)[0][1]
     }
 
