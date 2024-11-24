@@ -33,7 +33,7 @@ xgboost_SMOTE_model = load_model('xgboost-SMOTE.pkl')
 
 xgboost_featureEngineered_model = load_model('xgboost-featureEngineered.pkl')
 
-
+#bla bla bla username; twilight
 def prepare_input(credit_score, location, gender, age, tenure, balance,
                   num_products, has_credit_card, is_active_member,
                   estimated_salary):
@@ -61,7 +61,7 @@ def make_predictions(input_df, input_dict):
 
     probabilities = {
         'XGBoost': xgboost_model.predict_proba(input_df)[0][1],
-        'Naive Bayes': naive_bayes_model.predict_proba(input_df)[0][1],
+        'XGBoost Feature Engineered Model': xgboost_featureEngineered_model.predict_proba(input_df)[0][1],
         'Random Forest': random_forest_model.predict_proba(input_df)[0][1]
     }
 
